@@ -1,7 +1,7 @@
 // Importa Three.js e il loader OBJ
 import * as THREE from './path/to/three.module.js';
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.130.1/build/three.module.js';
-import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.133.1/examples/jsm/controls/OrbitControls.js';
+//import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.133.1/examples/jsm/controls/OrbitControls.js';
 import { OBJLoader } from 'https://cdn.jsdelivr.net/npm/three@0.133.1/examples/jsm/loaders/OBJLoader.js';
 
 // webpack.config.js
