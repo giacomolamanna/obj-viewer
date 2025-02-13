@@ -1,7 +1,28 @@
 // Importa Three.js e il loader OBJ
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.133.1/build/three.module.js';
+import * as THREE from './path/to/three.module.js';
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.130.1/build/three.module.js';
 import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.133.1/examples/jsm/controls/OrbitControls.js';
 import { OBJLoader } from 'https://cdn.jsdelivr.net/npm/three@0.133.1/examples/jsm/loaders/OBJLoader.js';
+
+// webpack.config.js
+module.exports = {
+    entry: './src/index.js',
+    output: {
+        filename: 'bundle.js',
+        path: __dirname + '/dist'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            }
+        ]
+    }
+};
 
 // Crea la scena
 const scene = new THREE.Scene();
